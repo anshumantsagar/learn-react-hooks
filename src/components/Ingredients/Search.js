@@ -18,7 +18,6 @@ const Search = React.memo(props => {
     fetch('https://react-hooks-66b80.firebaseio.com/ingredients.json' + query)
     .then(response => response.json())
     .then(resoponseData => {
-      console.log(resoponseData, 'in Search Component')
       const loadedIngredients = [];
       for (const key in resoponseData) {
         loadedIngredients.push({
